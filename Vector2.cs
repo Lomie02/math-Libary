@@ -40,6 +40,8 @@ namespace Math_Libary
 
             results.x = lhs.x - rhs.x;
             results.x = lhs.y - rhs.y;
+
+            return results;
         }
 
         //-------------------------------
@@ -52,6 +54,8 @@ namespace Math_Libary
 
             results.x = lhs * rhs;
             results.y = lhs * rhs;
+
+            return results;
         }
 
         //-------------------------------
@@ -64,6 +68,29 @@ namespace Math_Libary
 
             results.x = lhs + rhs;
             results.y = lhs + rhs;
+
+            return results;
+        }
+
+        //-------------------------------
+        // Magnitude
+        //-------------------------------
+
+         public float Magnitude()
+        {
+            //c^ = sqrt
+
+            return (float)Math.Sqrt((x * x) + (y * y));
+        }
+
+        public void Normalise()
+        {
+            float magnitude = Magnitude();
+            if(magnitude != 0)
+            {
+                x /= magnitude;
+                y /= magnitude;
+            }
         }
     }
 
