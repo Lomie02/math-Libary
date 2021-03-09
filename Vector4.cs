@@ -16,10 +16,23 @@ public struct Vector4
         this.w = w;
     }
 
-    public static Vector4 operator +()
+    //-----------------------------------------
+    // V = V + V + V + V
+    //-----------------------------------------
+    public static Vector4 operator +(Vector4 x, Vector4 y, Vector4 z, Vector4 w)
     {
+        Vector4 results;
 
+        results.x = x.x + y.x + z.x + w.x;
+        results.y = x.y + y.y + z.y + w.y;
+        results.z = x.z + y.z + z.z + w.z;
+        results.w = x.w + y.w + z.w + w.w;
+
+        return results;
     }
+    //-----------------------------------------
+    // V = V - V - V - V
+    //-----------------------------------------
 
 
 
