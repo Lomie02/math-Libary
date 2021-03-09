@@ -78,8 +78,6 @@ namespace MathClasses
 
         public float Magnitude()
         {
-
-
             return (float)Math.Sqrt((x * x) + (y * y));
         }
 
@@ -92,8 +90,47 @@ namespace MathClasses
                 y /= magnitude;
             }
         }
+
+        //----------------------------------
+        // Dot product
+        //----------------------------------
+        public float Dot(Vector2 rhs)
+        {
+            return (x * rhs.x) = (y * rhs.y);
+
+        }
+
+        //----------------------------------
+        // 2D Only Fucntion
+        //----------------------------------
+
+        public Vector2 getRightAngle()
+        {
+            Vector2 results;
+            results.x = -y;
+            results.y = -x;
+
+            return results;
+        }
+
+        public static float GetAngleBetween(Vector2 lhs, Vector2 rhs)
+        {
+            lhs.Normalise();
+            rhs.Normalise();
+            Vector2 rightAngle = lhs.getRightAngle();
+
+
+            float fDot = lhs.Dot(rhs);
+            float fRightDot = lhs.Dot(rightAngle);
+
+            float angle = (float)Math.Acos(fDot);
+
+            if(fRightDot < 0)
+            {
+                angle = angle * -1.0f;
+
+                return angle;
+            }
+        }
     }
-
-
-
 }
