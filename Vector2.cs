@@ -30,6 +30,29 @@ namespace Math_Libary
             return results;
         }
 
+        //-------------------------------
+        // V = V - V
+        //-------------------------------
+
+        public static Vector2 operator-(Vector2 lhs, Vector2 rhs)
+        {
+            Vector2 results;
+
+            results.x = lhs.x - rhs.x;
+            results.x = lhs.y - rhs.y;
+        }
+
+        //-------------------------------
+        // V = V = F
+        //-------------------------------
+
+        public static Vector2 operator *(Vector2 lhs, float rhs)
+        {
+            Vector2 results;
+
+            results.x = lhs * rhs;
+            results.y = lhs * rhs;
+        }
     }
 
     
