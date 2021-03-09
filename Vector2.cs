@@ -43,7 +43,7 @@ namespace Math_Libary
         }
 
         //-------------------------------
-        // V = V = F
+        // V = V x F
         //-------------------------------
 
         public static Vector2 operator *(Vector2 lhs, float rhs)
@@ -53,7 +53,20 @@ namespace Math_Libary
             results.x = lhs * rhs;
             results.y = lhs * rhs;
         }
+
+        //-------------------------------
+        // V = F x V
+        //-------------------------------
+
+        public static Vector2 operator *(float lhs, Vector2 rhs)
+        {
+            Vector2 results;
+
+            results.x = lhs + rhs;
+            results.y = lhs + rhs;
+        }
     }
+
 
     
 }
