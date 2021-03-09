@@ -1,0 +1,8 @@
+D:\Semester 1\math libary\Math Libary\Math Libary\bin\Debug\netstandard2.0\Math Libary.deps.json
+D:\Semester 1\math libary\Math Libary\Math Libary\bin\Debug\netstandard2.0\Math Libary.dll
+D:\Semester 1\math libary\Math Libary\Math Libary\bin\Debug\netstandard2.0\Math Libary.pdb
+D:\Semester 1\math libary\Math Libary\Math Libary\obj\Debug\netstandard2.0\Math Libary.csprojAssemblyReference.cache
+D:\Semester 1\math libary\Math Libary\Math Libary\obj\Debug\netstandard2.0\Math Libary.AssemblyInfoInputs.cache
+D:\Semester 1\math libary\Math Libary\Math Libary\obj\Debug\netstandard2.0\Math Libary.AssemblyInfo.cs
+D:\Semester 1\math libary\Math Libary\Math Libary\obj\Debug\netstandard2.0\Math Libary.dll
+D:\Semester 1\math libary\Math Libary\Math Libary\obj\Debug\netstandard2.0\Math Libary.pdb

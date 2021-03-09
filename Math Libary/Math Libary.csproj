@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Math_Libary</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="D:\GitHub\Dylan Smith programming\Vector2.cs" Link="Vector2.cs" />
+    <Compile Include="D:\GitHub\Math Libary\math-Libary\Vector2.cs" Link="Vector2.cs" />
+  </ItemGroup>
+
+</Project>
