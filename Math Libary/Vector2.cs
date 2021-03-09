@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Math_Libary
+namespace MathClasses
 {
     public struct Vector2
     {
@@ -34,7 +34,7 @@ namespace Math_Libary
         // V = V - V
         //-------------------------------
 
-        public static Vector2 operator-(Vector2 lhs, Vector2 rhs)
+        public static Vector2 operator -(Vector2 lhs, Vector2 rhs)
         {
             Vector2 results;
 
@@ -76,9 +76,9 @@ namespace Math_Libary
         // Magnitude
         //-------------------------------
 
-         public float Magnitude()
+        public float Magnitude()
         {
-            //c^ = sqrt
+
 
             return (float)Math.Sqrt((x * x) + (y * y));
         }
@@ -86,7 +86,7 @@ namespace Math_Libary
         public void Normalise()
         {
             float magnitude = Magnitude();
-            if(magnitude != 0)
+            if (magnitude != 0)
             {
                 x /= magnitude;
                 y /= magnitude;
@@ -95,5 +95,5 @@ namespace Math_Libary
     }
 
 
-    
+
 }

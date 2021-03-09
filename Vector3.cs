@@ -1,33 +1,102 @@
 ﻿using System;
 
-public class Vector3
+
+public struct Vector3
 {
-	public struct Vector3
-	{
-		public float x;
-		public float y;
-		public float z;
+    public float x;
+    public float y;
+    public float z;
 
-		//-----------------------------
-		// Constructor
-		//-----------------------------
+    //-----------------------------
+    // Constructor
+    //-----------------------------
 
-		public Vector3(float x = 0.0f, float y = 0.0f, float z = 0.0f)
+    public Vector3(float x = 0.0f, float y = 0.0f, float z = 0.0f)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    //-----------------------------
+    // V = V + V + V
+    //-----------------------------
+    public static Vector3 operator +(Vector3 x, Vector3 y, Vector3 z)
+    {
+        Vector3 results;
+
+        results.x = x.x + y.x + z.z;
+        results.y = x.y + y.y + z.y;
+        results.z = x.z + y.z + z.z;
+
+        return results;
+    }
+
+    //-------------------------------
+    // V = V - V - V
+    //-------------------------------
+
+    public static Vector3 operator -(Vector3 x, Vector3 y, Vector3 z)
+    {
+        Vector3 results;
+
+        results.x = x.x - y.x - z.x;
+        results.y = x.y - y.y - z.y;
+        results.z = x.z - y.z - z.z;
+    }
+
+    //-------------------------------
+    // V = F * V * V
+    //-------------------------------
+
+    public static Vector3 operator *(float x, Vector3 y, Vector3 z)
+    {
+        Vector3 results;
+
+        results.x = x * y * z;
+        results.y = x * y * z;
+        results.z = x * y * z;
+
+        return results;
+    }
+
+    //-------------------------------
+    // V = V * F * V
+    //-------------------------------
+
+    public static Vector3 operator *(Vector3 x, float y, Vector3 z)
+    {
+        Vector3 results;
+
+        results.x = x * y * z;
+        results.y = x * y * z;
+        results.z = x * y * z;
+    }
+    //------------------------------
+    // V = V * V * F
+    //------------------------------
+    public static Vector3 operator *(Vector3 x, Vector3 y, float z)
+    {
+        Vector3 results;
+
+        results.x = x * y * z;
+        results.y = x * y * z;
+        results.z = x * y * z;
+    }
+
+    public void Magnitude()
+    {
+        return (float)Math.Sqrt((x * x) + (y * y) + (z * z));
+    }
+
+    public void Normilize()
+    {
+        float magnitude = Magnitude();
+        if (magnitude != 0)
         {
-			this.x = x;
-			this.y = y;
-			this.z = z;
+            x /= magnitude;
+            y /= magnitude;
+            z /= magnitude;
         }
-
-		public static Vector3 operator +(Vector3 x, Vector3 y, Vector3 z)
-        {
-			Vector3 results;
-
-			results.x = x.x + y.x + z.z;
-			results.y = x.y + y.y + z.y;
-			results.z = x.z + y.z + z.z;
-
-			return results;
-        }
-	}
+    }
 }
+
