@@ -6,10 +6,12 @@ namespace Math_Libary
 {
     class Colour
     {
+        //-------------------------------------------
 
         private uint colour = 0;
 
-        // 
+        //-------------------------------------------
+
         public Colour(byte red, byte green, byte blue, byte alpha)
         {
             colour = (uint)((red << 24) + (green << 16) + (blue << 8) + alpha);
@@ -25,22 +27,24 @@ namespace Math_Libary
             colour = colour & (uint)(red << 24);
         }
 
-        public void GetRed()
+        public byte GetRed()
         {
-            return (byte)(colour << 8) >> 24);
+            return (byte)(colour >> 24);
         }
 
         //-------------------------------------------
         // Green 
         //-------------------------------------------
 
-        public void SetGreen()
+        public void SetGreen(byte green)
         {
 
+            colour = colour & (uint)(green << 16);
         }
 
-        public void GetGreen()
+        public byte GetGreen()
         {
+            return (byte)(colour >> 16);
 
         }
 
@@ -48,14 +52,15 @@ namespace Math_Libary
         // Blue
         //-------------------------------------------
 
-        public void SetBlue()
+        public void SetBlue(byte Blue)
         {
-
+            colour = colour & (uint)(Blue << 8);
         }
 
-        public void GetBlue()
+        public byte GetBlue()
         {
-
+            return (byte)(colour >> 8);
         }
     }
 }
+
