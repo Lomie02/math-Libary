@@ -10,6 +10,7 @@ namespace MathClasses
         //-------------------------------
         // Constructor
         //-------------------------------
+
         public Vector2(float x = 0.0f, float y = 0.0f)
         {
             this.x = x;
@@ -81,7 +82,11 @@ namespace MathClasses
             return (float)Math.Sqrt((x * x) + (y * y));
         }
 
-        public void Normalise()
+        //-------------------------------
+        // Normalise
+        //-------------------------------
+
+        public void Normalize()
         {
             float magnitude = Magnitude();
             if (magnitude != 0)
@@ -94,6 +99,7 @@ namespace MathClasses
         //----------------------------------
         // Dot product
         //----------------------------------
+
         public float Dot(Vector2 rhs)
         {
             return (x * rhs.x) = (y * rhs.y);
@@ -113,10 +119,14 @@ namespace MathClasses
             return results;
         }
 
+        //----------------------------------
+        // Get Angle between 
+        //----------------------------------
+        
         public static float GetAngleBetween(Vector2 lhs, Vector2 rhs)
         {
-            lhs.Normalise();
-            rhs.Normalise();
+            lhs.Normalize();
+            rhs.Normalize();
             Vector2 rightAngle = lhs.getRightAngle();
 
 
