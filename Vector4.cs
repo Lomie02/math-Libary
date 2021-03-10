@@ -61,6 +61,19 @@ namespace MathClasses
         }
 
         //--------------------------------------
+        //
+        //--------------------------------------
+
+        public static Vector4 operator *(Vector4 x, float y = 0.0f, Vector4 z, Vector4 z)
+        {
+            Vector4 results;
+            results.x = x * y * z * w;
+            results.y = x * y * z * w;
+            results.z = x * y * z * w;
+            results.w = x * y * z * w;
+        }
+
+        //--------------------------------------
         // V = V * F * V * V
         //--------------------------------------
 
@@ -68,8 +81,8 @@ namespace MathClasses
         {
             Vector4 results;
             results.x = (y * rhs.z) - (z * rhs.y);
-            results.y = //
-            results.z = //
+            results.y = (z * rhs.z) - (z * rhs.z);
+            results.z = (x * rhs.z) - (z * rhs.x);
             results.w = 0;
         }
 

@@ -116,8 +116,8 @@ namespace MathClasses
         {
             Vector3 results;
             results.x = (y * rhs.z) - (z * rhs.y);
-            results.y = //
-            results.z = //
+            results.y = (z * rhs.z) - (z * rhs.z);
+            results.z = (x * rhs.z) - (z * rhs.x);
 
         }
 

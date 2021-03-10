@@ -53,8 +53,8 @@ namespace MathClasses
         {
             Vector2 results;
 
-            results.x = lhs * rhs;
-            results.y = lhs * rhs;
+            results.x = lhs.x * rhs;
+            results.y = lhs.y * rhs;
 
             return results;
         }
@@ -67,11 +67,11 @@ namespace MathClasses
         {
             Vector2 results;
 
-            results.x = lhs + rhs;
-            results.y = lhs + rhs;
+            results.x = lhs + rhs.x;
+            results.y = lhs + rhs.y;
 
             return results;
-        }
+        } 
 
         //-------------------------------
         // Magnitude
