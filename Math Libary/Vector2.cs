@@ -129,7 +129,6 @@ namespace MathClasses
             rhs.Normalize();
             Vector2 rightAngle = lhs.getRightAngle();
 
-
             float fDot = lhs.Dot(rhs);
             float fRightDot = lhs.Dot(rightAngle);
 
@@ -141,6 +140,7 @@ namespace MathClasses
 
                 return angle;
             }
+
         }
     }
 }

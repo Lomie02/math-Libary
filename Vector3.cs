@@ -49,7 +49,7 @@ namespace MathClasses
         // V = F * V * V
         //-------------------------------
 
-        public static Vector3 operator *(float x, Vector3 y, Vector3 z)
+        public static Vector3 operator*(float x, Vector3 y, Vector3 z)
         {
             Vector3 results;
 

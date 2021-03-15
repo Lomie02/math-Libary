@@ -102,6 +102,7 @@ namespace MathClasses
         public void Normilize()
         {
             float magnitude = Magnitude();
+
             if (magnitude != 0)
             {
                 x /= magnitude;
