@@ -55,15 +55,15 @@ namespace MathClasses
         {
             Matrix3 result = new Matrix3();
 
-            //result.m[0] = 
-            //result.m[1] = 
-            //result.m[2] = 
-            //result.m[3] = 
-            //result.m[4] = 
-            //result.m[5] = 
-            //result.m[6] = 
-            //result.m[7] = 
-            //result.m[8] = 
+            result.m[0] = lhs.m[0] + rhs.m[0];
+            result.m[1] = lhs.m[1] + rhs.m[1];
+            result.m[2] = lhs.m[2] + rhs.m[2];
+            result.m[3] = lhs.m[3] + rhs.m[3];
+            result.m[4] = lhs.m[4] + rhs.m[4];
+            result.m[5] = lhs.m[5] + rhs.m[5];
+            result.m[6] = lhs.m[6] + rhs.m[6];
+            result.m[7] = lhs.m[7] + rhs.m[7];
+            result.m[8] = lhs.m[8] + rhs.m[8];
 
             return result;
         }
@@ -75,7 +75,7 @@ namespace MathClasses
         public void SetRotateX(float fRadians)
         {
             m[4] = (float)Math.Cos(fRadians);
-            m[5] = (float)Math.Sin(fRadians);
+            m[5] = (float)-Math.Sin(fRadians);
             m[6] = (float)Math.Cos(fRadians);
             m[7] = (float)Math.Sin(fRadians);
             m[8] = (float)Math.Cos(fRadians);
@@ -89,7 +89,7 @@ namespace MathClasses
         {
             m[0] = (float)Math.Cos(fRadians);
             m[2] = (float)Math.Sin(fRadians);
-            m[6] = (float)Math.Cos(fRadians);
+            m[6] = (float)-Math.Cos(fRadians);
             m[8] = (float)Math.Sin(fRadians);
         }
 
@@ -117,9 +117,27 @@ namespace MathClasses
         }
 
         //-----------------------------------------------------
+        // Vector Scale
+        //-----------------------------------------------------
+
+        public void SetScale(Vector2 scale)
+        {
+
+        }
+
+        //-----------------------------------------------------
         // Set the Transform Position
         //-----------------------------------------------------
 
+        public void SetTranslation(Vector2 pos)
+        {
+
+        }
+
+        //-----------------------------------------------------
+        
+        //-----------------------------------------------------
+        
         public void SetTranslation(float x, float y)
         {
 
