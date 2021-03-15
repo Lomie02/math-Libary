@@ -64,7 +64,7 @@ namespace MathClasses
         //
         //--------------------------------------
 
-        public static Vector4 operator *(Vector4 x, float y = 0.0f, Vector4 z, Vector4 z)
+        public static Vector4 operator *(Vector4 x, float y = 0.0f, Vector4 z, Vector4 w)
         {
             Vector4 results;
             results.x = x * y * z * w;

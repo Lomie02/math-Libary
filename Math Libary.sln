@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Math Libary", "Math Libary\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DFD13641-8796-486E-871E-A9A8F9D892CE}"
 	ProjectSection(SolutionItems) = preProject
+		Math Libary\Colour.cs = Math Libary\Colour.cs
 		Math Libary\Vector2.cs = Math Libary\Vector2.cs
 		Vector3.cs = Vector3.cs
 		Vector4.cs = Vector4.cs
