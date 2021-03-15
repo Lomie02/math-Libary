@@ -35,7 +35,7 @@ namespace MathClasses
         // V = V - V - V - V
         //-----------------------------------------
 
-        public static Vector4 operator-(Vector4 x, Vector4 y, Vector4 z, Vector4 w)
+        public static Vector4 operator -(Vector4 x, Vector4 y, Vector4 z, Vector4 w)
         {
             Vector4 results;
 

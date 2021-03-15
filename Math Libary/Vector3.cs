@@ -53,9 +53,9 @@ namespace MathClasses
         {
             Vector3 results;
 
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
+            results.x = x * y.x * z.x;
+            results.y = x * y.y * z.y;
+            results.z = x * y.z * z.z;
 
             return results;
         }
@@ -68,20 +68,22 @@ namespace MathClasses
         {
             Vector3 results;
 
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
+            results.x = x.x * y * z.x;
+            results.y = x.y * y * z.y;
+            results.z = x.z * y * z.z;
         }
+
         //------------------------------
         // V = V * V * F
         //------------------------------
+
         public static Vector3 operator*(Vector3 x, Vector3 y, float z)
         {
             Vector3 results;
 
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
+            results.x = x.x * y.x * z;
+            results.y = x.y * y.y * z;
+            results.z = x.z * y.z * z;
         }
 
         //---------------------------------------
@@ -119,6 +121,7 @@ namespace MathClasses
             results.y = (z * rhs.z) - (z * rhs.z);
             results.z = (x * rhs.z) - (z * rhs.x);
 
+            return results;
         }
 
         //---------------------------------------
