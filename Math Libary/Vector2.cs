@@ -35,12 +35,12 @@ namespace MathClasses
         // V = V - V
         //-------------------------------
 
-        public static Vector2 operator -(Vector2 lhs, Vector2 rhs)
+        public static Vector2 operator-(Vector2 lhs, Vector2 rhs)
         {
             Vector2 results;
 
             results.x = lhs.x - rhs.x;
-            results.x = lhs.y - rhs.y;
+            results.y = lhs.y - rhs.y;
 
             return results;
         }
@@ -102,7 +102,7 @@ namespace MathClasses
 
         public float Dot(Vector2 rhs)
         {
-            return (x * rhs.x) = (y * rhs.y);
+            return (x * rhs.x) + (y * rhs.y);
 
         }
 
@@ -138,8 +138,8 @@ namespace MathClasses
             {
                 angle = angle * -1.0f;
 
-                return angle;
             }
+                return angle;
 
         }
     }

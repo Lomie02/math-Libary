@@ -19,69 +19,58 @@ namespace MathClasses
             this.z = z;
         }
         //-----------------------------
-        // V = V + V + V
+        // V = V + V 
         //-----------------------------
-        public static Vector3 operator +(Vector3 x, Vector3 y, Vector3 z)
+        public static Vector3 operator +(Vector3 lhs, Vector3 rhs)
         {
             Vector3 results;
 
-            results.x = x.x + y.x + z.z;
-            results.y = x.y + y.y + z.y;
-            results.z = x.z + y.z + z.z;
+            results.x = lhs.x + rhs.x;
+            results.y = lhs.y + rhs.y;
+            results.z = lhs.z + rhs.z;
 
             return results;
         }
 
         //-------------------------------
-        // V = V - V - V
+        // V = V - V 
         //-------------------------------
 
-        public static Vector3 operator -(Vector3 x, Vector3 y, Vector3 z)
+        public static Vector3 operator -(Vector3 lhs, Vector3 rhs)
         {
             Vector3 results;
 
-            results.x = x.x - y.x - z.x;
-            results.y = x.y - y.y - z.y;
-            results.z = x.z - y.z - z.z;
+            results.x = lhs.x - rhs.x;
+            results.y = lhs.y - rhs.y;
+            results.z = lhs.z - rhs.z;
         }
 
         //-------------------------------
-        // V = F * V * V
+        // V = F * V 
         //-------------------------------
 
-        public static Vector3 operator*(float x, Vector3 y, Vector3 z)
+        public static Vector3 operator*(float lhs, Vector3 rhs)
         {
             Vector3 results;
 
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
+            results.x = lhs * rhs.x;
+            results.y = lhs * rhs.y;
+            results.z = lhs * rhs.z;
 
             return results;
         }
 
         //-------------------------------
-        // V = V * F * V
+        // V = V * F 
         //-------------------------------
 
-        public static Vector3 operator*(Vector3 x, float y, Vector3 z)
+        public static Vector3 operator*(Vector3 lhs, float rhs)
         {
             Vector3 results;
 
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
-        }
-        //------------------------------
-        // V = V * V * F
-        //------------------------------
-        public static Vector3 operator*(Vector3 x, Vector3 y, float z)
-        {
-            Vector3 results;
-
-            results.x = x * y * z;
-            results.y = x * y * z;
-            results.z = x * y * z;
+            results.x = lhs.x * rhs;
+            results.y = lhs.y * rhs;
+            results.z = lhs.z * rhs;
         }
 
         //---------------------------------------
@@ -125,9 +114,9 @@ namespace MathClasses
         // Dot Product
         //---------------------------------------
 
-        public float Dot(Vector2 rhs)
+        public float Dot(Vector3 rhs)
         {
-            return (x * rhs.x) = (y * rhs.y);
+            return (x * rhs.x) + (y * rhs.y) + (z * rhs.z);
 
         }
 
