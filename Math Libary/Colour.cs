@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Math_Libary
+namespace MathClasses
 {
-    class Colour
+   public class Colour
     {
         //-------------------------------------------
 
-        private uint colour = 0;
+        public uint colour = 0;
 
         //-------------------------------------------
+        public Colour()
+        {
+
+        }
 
         public Colour(byte red, byte green, byte blue, byte alpha)
         {
-            colour = (uint)((red << 24) + (green << 16) + (blue << 8) + alpha);
+            colour = (uint)((red << 24) + (green << 16) + (blue << 8) + (alpha << 0));
         }
 
         //-------------------------------------------
@@ -23,8 +27,8 @@ namespace Math_Libary
         
         public void SetRed(byte red)
         {
-            colour = colour | 0xff000000;
-            colour = colour & (uint)(red << 24);
+            colour = colour & 0x00ffffff;
+            colour = colour | (uint)(red << 24);
         }
 
         public byte GetRed()
@@ -39,13 +43,15 @@ namespace Math_Libary
         public void SetGreen(byte green)
         {
 
-            colour = colour & (uint)(green << 16);
+            colour = colour & 0xff00ffff;
+            colour = colour | (uint)(green << 16);
         }
 
         public byte GetGreen()
         {
             return (byte)(colour >> 16);
 
+            
         }
 
         //-------------------------------------------
@@ -54,12 +60,29 @@ namespace Math_Libary
 
         public void SetBlue(byte Blue)
         {
-            colour = colour & (uint)(Blue << 8);
+
+            colour = colour & 0xffff00ff;
+            colour = colour | (uint)(Blue << 8);
         }
 
         public byte GetBlue()
         {
             return (byte)(colour >> 8);
+        }
+
+        //-------------------------------------------
+        // Alpha
+        //-------------------------------------------
+
+        public void SetAlpha(byte Alpha)
+        {
+            colour = colour & 0xffffff00;
+            colour = colour | (uint)(Alpha << 0);
+        }
+
+        public byte GetAlpha()
+        {
+            return (byte)(colour >> 0);
         }
     }
 }

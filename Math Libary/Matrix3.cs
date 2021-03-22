@@ -2,7 +2,7 @@
 
 namespace MathClasses
 {
-   public  struct Matrix3
+    public struct Matrix3
     {
         public float m1;
         public float m2;
@@ -14,7 +14,7 @@ namespace MathClasses
         public float m8;
         public float m9;
 
-        public Matrix3(bool bDefault = true)
+        public Matrix3(bool bDefault)
         {
 
             m1 = 1;
@@ -28,6 +28,18 @@ namespace MathClasses
             m9 = 1;
         }
 
+        public void Identity()
+        {
+            m1 = 1;
+            m2 = 0;
+            m3 = 0;
+            m4 = 0;
+            m5 = 1;
+            m6 = 0;
+            m7 = 0;
+            m8 = 0;
+            m9 = 1;
+        }
         //---------------------------------------------
 
         public Matrix3(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9)
@@ -58,7 +70,7 @@ namespace MathClasses
 
         //---------------------------------------------
 
-        public static Matrix3 operator *(Matrix3 lhs, Matrix3 rhs)
+        public static Matrix3 operator*(Matrix3 lhs, Matrix3 rhs)
         {
             Matrix3 result;
 
@@ -83,6 +95,8 @@ namespace MathClasses
 
         public void SetRotateX(float fRadians)
         {
+            Identity();
+
             m5 = (float)Math.Cos(fRadians);
             m6 = (float)Math.Sin(fRadians);
             m8 = (float)-Math.Sin(fRadians);
@@ -96,6 +110,8 @@ namespace MathClasses
 
         public void SetRotateY(float fRadians)
         {
+            Identity();
+
             m1 = (float)Math.Cos(fRadians);
             m3 = (float)-Math.Sin(fRadians);
             m7 = (float)Math.Sin(fRadians);
@@ -108,6 +124,8 @@ namespace MathClasses
 
         public void SetRotateZ(float fRadians)
         {
+            Identity();
+
             m1 = (float)Math.Cos(fRadians);
             m2 = (float)Math.Sin(fRadians);
             m4 = (float)-Math.Sin(fRadians);
@@ -118,6 +136,7 @@ namespace MathClasses
         // Set the Scale 
         //-----------------------------------------------------
 
+            
         public void SetScale(float x, float y)
         {
             m1 = (float)Math.Cos(x);
@@ -129,7 +148,7 @@ namespace MathClasses
         // Vector Scale
         //-----------------------------------------------------
 
-        public void SetScale(Vector2 scale)
+        public void SetScale(Vector3 scale)
         {
 
         }
@@ -138,7 +157,7 @@ namespace MathClasses
         // Set the Transform Position
         //-----------------------------------------------------
 
-        public void SetTranslation(Vector2 pos)
+        public void SetTranslation(Vector3 pos)
         {
 
         }

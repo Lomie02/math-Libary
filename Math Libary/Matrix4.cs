@@ -21,7 +21,7 @@ namespace MathClasses
         public float m15;
         public float m16;
 
-        public Matrix4(bool bDefault = true)
+        public Matrix4(bool bDefault)
         {
             m1 = 1;
             m2 = 0;
@@ -41,6 +41,25 @@ namespace MathClasses
             m16 = 1;
         }
 
+        public void Identity()
+        {
+            m1 = 1;
+            m2 = 0;
+            m3 = 0;
+            m4 = 0;
+            m5 = 0;
+            m6 = 1;
+            m7 = 0;
+            m8 = 0;
+            m9 = 0;
+            m10 = 0;
+            m11 = 1;
+            m12 = 0;
+            m13 = 0;
+            m14 = 0;
+            m15 = 0;
+            m16 = 1;
+        }
         //---------------------------------------------
 
         public Matrix4(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9, float m10, float m11, float m12, float m13, float m14, float m15, float m16)
@@ -115,6 +134,8 @@ namespace MathClasses
 
         public void SetRotateX(float fRadians)
         {
+            Identity();
+
             m6 = (float)Math.Cos(fRadians);
             m7 = (float)Math.Sin(fRadians);
             m10 = (float)-Math.Sin(fRadians);
@@ -128,6 +149,8 @@ namespace MathClasses
 
         public void SetRotateY(float fRadians)
         {
+            Identity();
+
             m1 = (float)Math.Cos(fRadians);
             m3 = (float)-Math.Sin(fRadians);
             m9 = (float)Math.Sin(fRadians);
@@ -140,6 +163,8 @@ namespace MathClasses
 
         public void SetRotateZ(float fRadians)
         {
+            Identity();
+            
             m1 = (float)Math.Cos(fRadians);
             m2 = (float)Math.Sin(fRadians);
             m5 = (float)-Math.Sin(fRadians);
@@ -161,7 +186,7 @@ namespace MathClasses
         // Vector Scale
         //-----------------------------------------------------
 
-        public void SetScale(Vector2 scale)
+        public void SetScale(Vector4 scale)
         {
 
         }
@@ -170,7 +195,7 @@ namespace MathClasses
         // Set the Transform Position
         //-----------------------------------------------------
 
-        public void SetTranslation(Vector2 pos)
+        public void SetTranslation(Vector4 pos)
         {
 
         }

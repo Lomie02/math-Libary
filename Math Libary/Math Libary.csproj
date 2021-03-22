@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="D:\GitHub\Dylan Smith programming\Vector2.cs" Link="Vector2.cs" />
-    <Compile Include="D:\GitHub\Math Libary\math-Libary\Vector2.cs" Link="Vector2.cs" />
+   
   </ItemGroup>
 
 </Project>
